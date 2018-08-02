@@ -56,7 +56,7 @@ EXPOSE 4567-4583 8080
 ADD bin/supervisord.conf /etc/supervisord.conf
 
 # define command at startup
-ENTRYPOINT ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
 
 # run tests (to verify the build before pushing the image)
 ADD tests/ tests/
